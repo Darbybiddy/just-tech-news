@@ -16,7 +16,6 @@ router.get("/", (req, res) => {
 });
 
 //Get/api/users/1
-router.get("/:id", (req, res) => {
   router.get("/:id", (req, res) => {
     User.findOne({
         attributes: {exclude: ['password']},
@@ -36,7 +35,7 @@ router.get("/:id", (req, res) => {
         res.status(500).json(err);
       });
   });
-});
+
 
 // POST /api/users
 router.post('/', (req, res) => {
@@ -55,7 +54,6 @@ router.post('/', (req, res) => {
 
 //Put/api/user/1
 router.put("/:id", (req, res) => {
-    router.put('/', (req,res)=>{
         //expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
 
         // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
@@ -76,7 +74,6 @@ router.put("/:id", (req, res) => {
             res.status(500).json(err)
         })
     })
-});
 
 // DELETE /api/users/1
 router.delete('/:id', (req, res) => {

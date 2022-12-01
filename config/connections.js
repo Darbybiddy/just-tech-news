@@ -14,12 +14,3 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 module.exports = sequelize;
 
 
-//All we're doing here is importing the base 
-//Sequelize class and using it to create a new 
-//connection to the database.
-
-
-//The new Sequelize() function accepts the 
-//database name, MySQL username, and MySQL 
-//password (respectively) as parameters, then 
-//we also pass configuration settings.
